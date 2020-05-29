@@ -1,0 +1,66 @@
+import React from 'react'
+import '../components/styles/ExerciseNew.css'
+
+const ExerciseForm = ( { onChange, onSubmit, form } ) =>{
+    return (
+        <div className="container">
+            <form onSubmit={onSubmit}>
+                <div className="form-group">
+                    <input 
+                        type="text"
+                        className="form-control"
+                        placeholder="title"
+                        name="title"
+                        onChange={onChange} 
+                        value={form.title}/>
+
+                </div>
+                <div className="form-group">
+                    <input 
+                        type="text"
+                        className="form-control"
+                        placeholder="description"
+                        name="description" 
+                        onChange={onChange}
+                        value={form.description}/>
+                </div>
+                <div className="form-group">
+                    <input 
+                        type="text"
+                        className="form-control"
+                        placeholder="img"
+                        name="img" 
+                        onChange={onChange}
+                        value={form.img}/>
+                </div>
+                <div className="col">
+                    <input 
+                        type="text"
+                        className="form-control"
+                        placeholder="leftColor"
+                        name="leftColor" 
+                        onChange={onChange}
+                        value={form.leftColor}/>
+                        
+                </div>
+                
+                <div className="col">
+                    <input 
+                        type="text"
+                        className="form-control"
+                        placeholder="RightColor"
+                        name="rightColor" 
+                        onChange={onChange}
+                        value={form.rightColor}/>
+
+                </div>
+                <button type="submit"
+                    className="btn btn-primary">
+                    Submit
+                </button>
+            </form>
+        </div>
+    )
+}
+
+export default ExerciseForm
